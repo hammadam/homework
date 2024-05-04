@@ -69,14 +69,14 @@ div.avatars_wrapper>ul.avatars_list>li.avatar.avatar$*8>img+span.avatars_state
 &nbsp;
 
 > 이 시점에서 img 태그에 alt 속성을 작성하려고 했지만 li에 aria-label로 대체텍스트를 넣어주면 접근성이 더 향상되지 않을까 고민해보았다.  
-> 그래도 이미지를 설명하는 대체텍스트는 img의 alt 속성을 사용하는 것이 원칙이니 일단은 원칙대로 하기로 했다.  
+> 그래도 이미지를 설명하는 대체텍스트는 img의 alt 속성을 사용하는 것이 필수이니 일단은 원칙대로 하기로 했다.  
 > 이 부분에 대해서는 조금 더 고민이 필요할 것 같다.
 
 &nbsp;
 
-과제의 내용에서 <span style="background-color:#fef1c5;">flex가 지원되는 브라우저 환경에서는 남성과 여성의 순번이 바뀌게 구현하라</span>는 요구사항 때문에 마크업을 어떻게 해야할지 가장 큰 고민이 되었다.
+과제의 내용에서 `flex가 지원되는 브라우저 환경에서는 남성과 여성의 순번이 바뀌게 구현하라`는 요구사항 때문에 마크업을 어떻게 해야할지 가장 큰 고민이 되었다.
 1. 여성 아바타 그룹과 남성 아바타 그룹을 크게 나눠서 마크업해야할 지
-2. 아바타를 성별애 관계없이 모두 하나의 그룹으로 지은 뒤에 작업할 지
+2. 아바타를 성별에 관계없이 모두 하나의 그룹으로 지은 뒤에 작업할 지
 
 혹여 단순히 여성그룹과 남성그룹의 순서를 바꿔달라는 요청이 아닐 수도 있기 때문에 아래와 같이 작업하였다.
 - 성별 그룹을 하나의 ul에 넣어서 마크업
@@ -120,7 +120,7 @@ ul, li{list-style:none;margin:0;padding:0;}
 &nbsp;
 
 ### 전체적인 레이아웃 style 작업
-<span style="background-color:#d6f0ff;">float을 사용한 레이아웃 구성</span>
+### _- float을 사용한 레이아웃 구성_
 - 목록 전체를 감싸고 있는 div.avatars_wrapper 에 style 지정
 - 먼저 li를 float으로 배치하는 기본적인 레이아웃을 구현함
 - img를 감싸고 있는 li의 높이값이 딱맞게 떨어지지 않아 li에 line-height:0.5 값을 부여
@@ -139,7 +139,7 @@ ul, li{list-style:none;margin:0;padding:0;}
 &nbsp;
 
 
-<span style="background-color:#d6f0ff;">flex를 지원하는 브라우저 환경을 위한 레이아웃 구성</span>
+### _- flex를 지원하는 브라우저 환경을 위한 레이아웃 구성_
 - flex를 지원하는 환경을 위한 style은 css 파일의 최하단에서 @supports (display:flex) {} 를 활용
 - 아바타 목록인 ul.avatars_list 에 display:flex;flex-flow:row wrap; 값을 부여하고, 목록이 항상 가운데에 위치하도록 justify-content: center; 값을 지정함
 - float으로 구현한 아바타 목록에서는 여성 아바타들이 먼저 배치되고 남성 아바타들이 배치되어있지만, flex를 지원하는 환경에서는 남성 아바타들이 먼저 배치되기를 요청받음
@@ -156,7 +156,7 @@ ul, li{list-style:none;margin:0;padding:0;}
 
 &nbsp;
 <details>
-<summary><span style="background-color:#f1f1f1;">아쉽다</span></summary>
+<summary>🙃<span style="background-color:#f1f1f1;">아쉽다</span></summary>
 클라이언트(슬비쌤)의 요청사항을 확실하게 물어보았다면 이렇게 다양한 상황을 대비할 필요가 없었을텐데, 다소 아쉬운 부분이 있다. 이런 부분은 반성하자.
 </details>
 
@@ -164,21 +164,21 @@ ul, li{list-style:none;margin:0;padding:0;}
 
 &nbsp;
 <details>
-<summary><span style="background-color:#f1f1f1;">접근성, 어렵다</span></summary>
+<summary>🧐<span style="background-color:#f1f1f1;">접근성, 어렵다</span></summary>
 접근성에 대한 고민은 html을 처음 접했을 때부터 많이 했다고 생각했는데, 슬비쌤 수업을 들으면서 그동안 고민만 하고 찾아보는 행위는 하지 않았구나, 라는걸 절실히 느꼈다. 이 과제를 통해 접근성이 조금이라도 더 향상된 코드를 짤 수 있게 되지 않았을까 돌아보게 되었다.
 </details>
 
 &nbsp;
 
 <details>
-<summary><span style="background-color:#f1f1f1;">Trailing slash 에 대한 고민</span></summary>
-웹표준 검사를 해보았더니 <span style="background-color:#fef0ff;">void 요소의 후행 슬래시는 아무런 효과가 없으며 따옴표가 없는 속성 값과 잘못 상호 작용 합니다 .</span> 라고 적혀있어서 안 넣는게 나은가하는 고민을 해보았다. 선생님께서 자유롭게 선택하라고 하셨으니 앞으로는 마음 편한대로 해보아야겠다.
+<summary>🤔<span style="background-color:#f1f1f1;">Trailing slash 에 대한 고민</span></summary>
+웹표준 검사를 해보았더니 "void 요소의 후행 슬래시는 아무런 효과가 없으며 따옴표가 없는 속성 값과 잘못 상호 작용 합니다." 라고 적혀있어서 안 넣는게 나은가하는 고민을 해보았다. 선생님께서 자유롭게 선택하라고 하셨으니 앞으로는 마음 편한대로 해보아야겠다.
 </details>
 
 
 &nbsp;
 
 <details>
-<summary><span style="background-color:#f1f1f1;">마크다운 이렇게 쓰는거 맞나</span></summary>
+<summary>😅<span style="background-color:#f1f1f1;">마크다운 이렇게 쓰는거 맞나</span></summary>
 너무 구구절절 적고 있는 것 같은데, 말이 맣은 성향이 또 이렇게 드러난다. 선생님 과제검사하시기 힘드시겠다.😅
 </details>
