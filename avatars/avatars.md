@@ -180,5 +180,5 @@ ul, li{list-style:none;margin:0;padding:0;}
 
 <details>
 <summary>😅<span style="background-color:#f1f1f1;">마크다운 이렇게 쓰는거 맞나</span></summary>
-너무 구구절절 적고 있는 것 같은데, 말이 맣은 성향이 또 이렇게 드러난다. 선생님 과제검사하시기 힘드시겠다.😅
+마크다운은 간단해야하지 않나? 너무 구구절절 적고 있는 것 같은데, 말이 많은 성향이 또 이렇게 드러난다. 선생님 과제검사하시기 힘드시겠다.😅
 </details>
