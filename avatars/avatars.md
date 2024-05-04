@@ -17,8 +17,14 @@ float과 flex를 활용한 레이아웃 작업하기
 
 &nbsp;
 
+# 과제 수행 결과
+[avatars.html 페이지 확인 클릭!]
 
-# 과제 수행
+&nbsp;
+
+[avatars.html 페이지 확인 클릭!]: <https://hammadam.github.io/homework/avatars/avatars.html>
+
+\< 과제 수행 과정 \>
 ## 1. 구조설계
 ### HTML <!DOCTYPE> 선언
 
