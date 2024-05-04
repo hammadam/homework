@@ -1,0 +1,15 @@
+ul, li{list-style:none;margin:0;padding:0;}
+
+.avatars_wrapper{padding:60px 0;border:1px solid #DBDBDB;background-color:#fbfbfb;}
+.avatars_list{width:336px;margin:0 auto;display:flow-root;}
+.avatars_list:after{content:'';display:block;clear:both;}
+.avatars_wrapper li{position:relative;float:left;margin:10px;line-height:0.5;}
+.avatars_wrapper li img{width:64px;border-radius:50%;}
+.avatars_wrapper li .avatars_state{display:block;position:absolute;bottom:0px;right:0px;width:16px;height:16px;background-color:#DBDBDB;border:1px solid #fff;border-radius:50%;}
+.avatars_wrapper li .avatars_state.on{background-color:#4CFE88;}
+
+
+@supports (display: flex){
+  .avatars_list{display:flex;flex-flow:row wrap;justify-content: center;}
+  .male{order:-1;}
+}
