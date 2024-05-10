@@ -1,0 +1,181 @@
+/* sr-only */
+.sr-only{
+  background:red;
+  position:absolute;
+  clip:rect(0,0,0,);
+  width:0.0625rem;
+  height:0.0625rem;
+  overflow:hidden;
+  margin:-0.0625rem;
+  clip-path:polygon(0 0, 0 0, 0 0);
+  padding:0;
+  white-space: nowrap;
+  border-width:0;
+}
+
+/* reset */
+*{
+  box-sizing:border-box;
+}
+*:focus, input:focus{
+  outline:0;
+}
+*:focus-visible, input:focus-visible{
+  outline:1px solid #24388d;
+}
+a{
+  text-decoration:none;
+  color:inherit;
+}
+input, button{
+  margin:0;padding:0;
+}
+
+
+/* 네이버 로그인 */
+body{
+  margin:0;
+  font-size:1rem;
+  color:#181818;
+}
+
+.login-wrapper{
+  padding:6.25rem 1.25rem 0;
+}
+
+.logo{
+  width:14.375rem;
+  inline-size:14.375rem;
+  margin:0 auto;
+
+  img{
+    width:100%;
+    vertical-align:top;
+  }
+}
+
+.login-form{
+  margin-top:3.125rem;
+
+  fieldset{
+    margin:0;
+    padding:0;
+    border:0;
+  }
+}
+
+.input-group{
+
+  label{
+    display:none;
+  }
+}
+
+.input-form{
+  width:100%;
+  inline-size:100%;
+  height:2.8125rem;
+  block-size:2.8125rem;
+  font-size:0.875rem;
+  line-height:2.8125;
+  padding:0.5rem 1rem;
+  margin-top:0.625rem;
+  background:#fff;
+  border:1px solid #dadada;
+
+  &:focus{
+    background:#e9f0fd;
+    border:1px solid #03cf5d;
+  }
+}
+
+.login-button{
+  width:100%;
+  font-size:1rem;
+  line-height:2.8125rem;
+  color:#fff;
+  background:#03cf5d;
+  margin-top:1.25rem;
+  border:0;
+}
+
+.login-state-group{
+  margin-top:10px;
+  display: flex;
+  flex-flow:row nowrap;
+  justify-content:right;
+  align-items: center;
+
+  .login-state{
+
+    input[type="checkbox"]{
+      position:absolute;
+      appearance: none;
+      width:1.5rem;
+      inline-size:1.5rem;
+      height:1.5rem;
+      block-size:1.5rem;
+    }
+
+    label{
+      display:block;
+      line-height:1.5rem;
+      background:url(icons/unchecked.svg) no-repeat 0 0 /contain;
+      padding-left:29px;
+    }
+
+    input[type="checkbox"]:checked +label{
+      background-image:url(icons/checked.svg);
+    }
+  }
+}
+
+.ip-security{
+  display:none;
+}
+
+
+/* 데스크탑 스타일 */
+@media (min-width:768px){
+  .login-wrapper{
+    width:500px;
+    inline-size:500px;
+    margin:0 auto;
+  }
+  .login-state-group{
+    justify-content: space-between;
+  }
+
+  .ip-security{
+    display:block;
+
+    > *{
+      float:left;
+    }
+
+    input[type="checkbox"]{
+      /* position:absolute; */
+      margin-left:8px;
+      appearance: none;
+    }
+    label{
+      text-indent:-9999em;
+    }
+
+    input[type="checkbox"]::before{
+      content:'OFF';
+    }
+
+    input[type="checkbox"]:checked::before{
+      content:'ON';
+      color:#03cf5d;
+    }
+    input[type="checkbox"]:focus{
+      outline:0;
+    }
+    input[type="checkbox"]:focus-visible::before{
+      outline:1px solid #24388d;
+      outline-offset:0;
+    }
+  }
+}
