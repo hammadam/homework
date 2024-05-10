@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>네이버 로그인</title>
+  <link rel="stylesheet" href="naver.css" />
+</head>
+<body>
+  <div class="login-wrapper">
+    <h1 class="logo">
+      <a href="/">
+        <picture>
+          <source srcset="logo.png 1x, logo@2x.png 2x, logo@3x.png 3x" />
+          <img src="logo.svg" alt="NAVER" />
+        </picture>
+      </a>
+    </h1>
+    <section class="login-form-wrapper">
+      <h2 class="sr-only">로그인</h2>
+      <form action="/" class="login-form">
+        <fieldset>
+          <legend class="sr-only">네이버 로그인 폼</legend>
+          <div class="login-form-group">
+            <div class="input-group">
+              <label for="user-id">아이디(이메일)</label>
+              <input type="email" class="input-form" name="user-id" id="user-id" placeholder="아이디(이메일)" required />
+            </div>
+            <div class="input-group">
+              <label for="user-password">비밀번호</label>
+              <input type="password" class="input-form" name="user-password" id="user-password" placeholder="비밀번호" required />
+            </div>
+          </div>
+          <button type="submit" class="login-button">로그인</button>
+          <div class="login-state-group">
+            <div class="login-state">
+              <input type="checkbox" id="stay-login" />
+              <label for="stay-login">로그인 상태유지</label>
+            </div>
+            <div class="ip-security">
+              <a href="ip_security.html" target="_blank">IP 보안</a>
+              <input type="checkbox" name="ip-security" id="ip-security-chk" />
+              <label for="ip-security-chk">IP 보안</label>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+  </div>
+</body>
+</html>
