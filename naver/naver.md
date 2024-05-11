@@ -27,18 +27,18 @@ form 요소를 활용한 네이버 로그인 레이아웃 작업하기
 ![initial](https://github.com/hammadam/homework/blob/main/naver/images/html_structure_design01.png?raw=true) 
 
 - 모바일 환경에서는 가로로 꽉차는 구조지만 데스크탑에서는 가운데에 콘텐츠가 배치될 수 있도록 `div.login-wrapper` 로 묶기
-- logo는 h1 요소 안의 a>img 로 구현하기, svg를 지원하지 않는 환경을 대비한 png 이미지도 준비해서 srcset 로 제공하기
-- form을 감싸는 section 요소와 제목 h2 요소를 만들기
-- form > fieldset > legend + div.login-form-group 구조로 틀을 짠 다음 내부에 각각 div.input-group로 감싼 label+input[type="email"] 과 label+input[type="password"] 로 구성하기
-- 로그인 버튼은 button[type="submit"].login-botton 으로 작업
-- 로그인 버튼 하단의 로그인상태유지, IP보안 ON/OFF 는 크게 div.login-state-group 로 묶고 각각 div.login-state 로 묶기
-- 로그인상태유지는 체크박스로 처리하되, 왼쪽 체크박스의 디자인을 구현하기 위해 체크박스를 display:none 처리하면 키보드로 포커스를 이동했을 때 접근이 불가능하기 때문에 position:absolute; appearance: none;로 처리하고 체크박스 이미지는 label 왼쪽에 배경이미지로 넣어서 처리하기
+- logo는 `h1` 요소 안의 `a>img` 로 구현하기, svg를 지원하지 않는 환경을 대비한 png 이미지도 준비해서 `srcset` 로 제공하기
+- `form`을 감싸는 `section` 요소와 제목 `h2` 요소를 만들기
+- `form > fieldset > legend + div.login-form-group` 구조로 틀을 짠 다음 내부에 각각 `div.input-group`로 감싼 `label+input[type="email"]` 과 `label+input[type="password"]` 로 구성하기
+- 로그인 버튼은 `button[type="submit"].login-botton` 으로 작업
+- 로그인 버튼 하단의 로그인상태유지, IP보안 ON/OFF 는 크게 `div.login-state-group` 로 묶고 각각 `div.login-state` 로 묶기
+- 로그인상태유지는 체크박스로 처리하되, 왼쪽 체크박스의 디자인을 구현하기 위해 체크박스를 `display:none` 처리하면 키보드로 포커스를 이동했을 때 접근이 불가능하기 때문에 `appearance: none`로 처리하고 체크박스 이미지는 `label` 왼쪽에 배경이미지로 넣어서 처리하기
 
 
 ![initial](https://github.com/hammadam/homework/blob/main/naver/images/html_structure_design02.png?raw=true) 
 - 로그인상태유지는 모바일에서는 오른쪽에 배치, 데스크탑에서는 왼쪽에 배치되게 하기
-- IP 보안은 a태그로 작업하되 새창으로 열리게끔 [target="_blank"] 속성 부여
-- ON/OFF 스위치는 접근성 측면에서 input 을 활용해야할 것 같은데 어떤 input을 활용해야할지 정리가 안 됨. radio 버튼으로 먼저 작업해보고, 안되면 checkbox로 도전해보기로 함
+- IP 보안은 `a`태그로 작업하되 새창으로 열리게끔 `[target="_blank"]` 속성 부여
+- ON/OFF 스위치는 접근성 측면에서 input 을 활용해야할 것 같은데 어떤 input을 활용해야할지 정리가 안 됨. 우선 `radio` 버튼으로 작업해보기로 함
 
 
 &nbsp;
@@ -63,9 +63,9 @@ form 요소를 활용한 네이버 로그인 레이아웃 작업하기
 
 ### 1-3. html 마크업
 피그마에서 설계했던 내용을 토대로 마크업 작업을 진행했다.
-> ON/OFF 스위치는 처음에 radio 버튼으로 마크업 했었는데  
+> ON/OFF 스위치는 처음에 `radio` 버튼으로 마크업 했었는데  
 > 키보드(방향키)로는 구현이 되었지만 오히려 마우스 클릭으로는 스위치가 바뀌는게 어려워서  
-> 결국 과감하게 코드를 지워버리고 checkbox로 다시 마크업함
+> 결국 `checkbox`로 다시 마크업함
 
 ```
 <body>
@@ -116,9 +116,9 @@ form 요소를 활용한 네이버 로그인 레이아웃 작업하기
 &nbsp;
 
 ## 2. 스타일 지정
-- css코드는 줄바꿈으로 작성해보기  
+- css코드는 `줄바꿈`으로 작성해보기  
 : 지난 과제에서 css를 한줄로 선언하는 방식은 코드의 가독성 측면에서 바람직하지 않다는 슬비쌤의 피드백을 받음
-- 중첩방식으로 작성하는 연습해보기
+- `중첩방식`으로 작성하는 연습해보기
 
 ### 2-1. 스타일 지정을 위해 naver.css 파일을 연결
 ```
@@ -129,7 +129,7 @@ form 요소를 활용한 네이버 로그인 레이아웃 작업하기
 
 ### 2-2. user agent style 초기화
 - 에이전트 스타일 reset
-- 숨김텍스트 sr-only(스크린온리) style 지정
+- 숨김텍스트 `sr-only`(스크린온리) style 지정
 
 ```
 /* reset */
@@ -176,7 +176,7 @@ fieldset{
 ### 2-3. 모바일 환경 레이아웃 style 작업
 - 모바일 화면(768px 미만)을 먼저 디자인
 - 단위는 최대한 rem 단위 활용
-- 모바일 환경에서 IP 보안 ON/OFF 스위치는 사용자에게 제공되지 않도록 .ip-security를 display:none 처리
+- 모바일 환경에서 IP 보안 ON/OFF 스위치는 사용자에게 제공되지 않도록 `.ip-security`를 `display:none` 처리
 ```
 /* 네이버 로그인 */
 body{
@@ -274,7 +274,7 @@ body{
 ### 2-4. 데스크탑 환경 레이아웃 style 작업
 - 데스크탑 환경 화면 디자인
 - 데스크탑 로그인 폼의 가로 크기는 500px(좌/우 여백 각 20px 포함)
-- ON/OFF 스위치를 표현하기 위해 input[type="checkbox"]::before 가상요소를 활용
+- ON/OFF 스위치를 표현하기 위해 `input[type="checkbox"]::before` 가상요소를 활용
 
 ```
 /* 데스크탑 스타일 */
@@ -333,6 +333,8 @@ body{
 
 ## heading 구조 확인, Validate_local_html 체크
 
+![initial](https://github.com/hammadam/homework/blob/main/naver/images/html_heading.png?raw=true) 
+![initial](https://github.com/hammadam/homework/blob/main/naver/images/Validate_local_html.png?raw=true) 
 
 &nbsp;
 
@@ -363,7 +365,7 @@ body{
 그때는 그냥 체크박스를 display:none 시켜버리고 디자인적으로만 처리를 했었는데,  
 그렇게 하면 키보드로 접근이 어렵다는걸 수업에서 처음 알게 됐다. 충격..  
 이번 과제를 통해서 그 부분을 다시한번 복습하게 되어 좋았다.  
-이제 현업에 가면 체크박스는 display: none; 이 아니라 appearance: none; 으로 숨길 수 있겠지!  
+이제 현업에 가면 체크박스는 display: none 이 아니라 `appearance: none` 으로 숨길 수 있겠지!  
 rem 단위 계산하는 것도 수업을 들으면서  
 아 이렇게 쉽게 할 수 있구나~ 이런 계산으로 하면 되는구나 라는걸 알게 되어서 좋다.  
 ㅎㅎ 재밌다!
