@@ -159,9 +159,9 @@ fieldset{
 /* sr-only */
 .sr-only{
   position:absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+  width: 0.0625rem;
+  height:0.0625rem;
+  margin: -0.0625rem;
   clip: rect(0,0,0,0);
   clip-path: polygon(0 0, 0 0, 0 0);
   overflow: hidden;
