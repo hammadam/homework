@@ -26,4 +26,20 @@
 
 [2주차 결과페이지 확인 클릭!]: <https://hammadam.github.io/homework/naver/naver.html>
 
+&nbsp;
+
+
+## [3] grid 속성을 활용한 애플 홈페이지 레이아웃 작업
+
+[3주차 과제수행과정] : apple.md
+
+[3주차 과제수행과정]: <https://github.com/hammadam/homework/blob/main/apple/apple.md>
+
+
+[3주차 결과페이지 확인 클릭!] : apple.html
+
+[3주차 결과페이지 확인 클릭!]: <https://hammadam.github.io/homework/apple/apple.html>
+
+
+
 
