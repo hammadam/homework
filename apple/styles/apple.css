@@ -43,7 +43,6 @@
   padding-top:var(--large-spacing);
   display:flex;
   flex-flow:column nowrap;
-  /* gap:var(--small-spacing); */
 
   .card-title{
     padding-bottom:var(--small-spacing);
